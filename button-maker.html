@@ -1,0 +1,335 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+      <title>Responsive CSS Button Generator</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+    
+<meta name="description" content="Style your html buttons with this css button style generator. It uses <quote>em</quote> as the unit for text size. All other measurment are in relation to the text size so the button proportions stay the same as the text size changes."/>
+<link rel="canonical" href="https://www.jasonprillo.com/button-maker.html"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Responsive CSS Button Generator"/>
+<meta property="og:description" content="Style your html buttons with this css button style generator. It uses <quote>em</quote> as the unit for text size. All other measurment are in relation to the text size so the button proportions stay the same as the text size changes."/>
+<meta property="og:url" content="https://www.jasonprillo.com">
+<meta property="og:site_name" content="Jason Prillo"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="Style your html buttons with this css button style generator. It uses <quote>em</quote> as the unit for text size. All other measurment are in relation to the text size so the button proportions stay the same as the text size changes."/>
+<meta name="twitter:title" content="Responsive CSS Button Generator"/>
+
+
+
+
+<style>
+
+html{
+  scroll-behavior:smooth;
+}
+#instructions{
+  
+  background: whitesmoke;
+  width: 60%;
+  padding: 2em 20%;
+
+ 
+}
+
+#generate{
+    background: #FF0000; color: #FFFFFF; font-size: 24px; padding: 0.3em 0.4em; text-shadow: 0em 0em 0px #000000; box-shadow: 0em 0em 0px #000000; border-radius: 10em; border: solid 0em #FFFFFF; font-weight: 500;
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+        <script src="jscolor.js"></script>
+<div class="hero" id="h">
+     <a href="/" style="position: absolute; right: 10%; margin-top: 10%; text-decoration: none; font-size: 20px;">Back</a>
+
+
+
+
+    <h1>Responsive CSS Button Generator</h1>
+    <a href="#instructions" id="scroll">INSTRUCTIONS</a>
+    <button onclick="generate()" id="generate">Get The CSS</button>
+    <!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_google_plus"></a>
+        </div>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <!-- AddToAny END -->
+</div>   
+
+    <div class="game" >
+        <div class = "controls-contain" >
+              
+            <label for="button-txt">Button Text</label>
+            <input type="text" id="button-text" name="button-txt"  oninput="text()" value="Click"><br>
+
+    
+            <label for="bck-color">Background Color</label>
+            <input class="jscolor {onFineChange:'background(this)'} color" name="bck-color" id="bck-color" value="cc66ff">
+            <br>
+            
+    <label for="btn-color">Button Background</label>
+    <input  name="btn-color" value="#40E0D0" class="jscolor {onFineChange:'backbutton(this)'} color">
+
+<br>
+    <label for="txt-color">Text color</label>
+    <input  name="txt-color" value="#000000" class="jscolor {onFineChange:'textcolor(this)'} color" ><br>
+<div class="flex">
+    <label for="font-size">Font Size</label>
+    <p id="value-display">20px</p>
+</div>
+    
+    <input type="range" max="100" min="0" value="20" oninput="main()" class="main" name="font-size"><br>
+    
+  <div class="flex">
+    <label for="vert">Vertical Padding</label>    
+    <p id="value-display">0em</p>
+</div>
+
+<input name="vert" type="range" max="50" min="0" value="0" oninput="main()" class="main">
+
+<div class="flex">
+    <label for="hor">Horizontal Padding</label>
+    
+    <p id="value-display">0em</p>
+</div>
+<input name="hor" type="range" max="100" min="0" value="0" oninput="main()" class="main">
+
+<div class="flex">
+    <label for="bold">Bolder</label>
+    
+    <p id="value-display">500</p>
+</div>
+<input name="bold" type="range" max="100" min="50" value="50" oninput="main()" class="main">
+    <div class="flex">
+    <label name="radius">Border Radius</label>
+    
+    <p  id="value-display">0em</p>
+</div>
+<input name="radius" type="range" max="100" min="0" value="0" oninput="border()" class="border">
+    <div class="flex">
+    <label for="border-width">Border Width</label>
+    
+    <p id="value-display">0em</p>
+    </div>
+    <input name="border-width" type="range" max="50" min="0" value="0" oninput="border()" class="border">
+    <div class="flex">
+    <label for="brd-color">Border Color</label>
+    <input name="brd-color" value="#000000" class="jscolor {onFineChange:'bordercolor(this)'} color" ><br>
+</div>
+   
+      
+   
+        </div>
+<div id="btn-container" >
+    <button id ="button" onmouseover ="hov()" onmouseout= "normal()" onclick="w()" >Click</button> 
+</div>
+<div class = "controls-two">
+    <h3>Text Shadow</h3>
+    
+        <div class="flex">
+                <label for="off">Horizontal</label>       
+                 <p  id="value-display">0em</p>
+    </div>
+    <input name="off" type="range" max="50" min="-50" value="0" oninput="txtshadow()" class="shadow">
+    
+    
+    <div class="flex">
+
+        <label for="set">Vertical</label>
+        
+        <p id="value-display">0em</p>
+     </div>  
+     <input name="set" type="range" max="50" min="-50" value="0" oninput="txtshadow()" class="shadow">
+     
+     <div class="flex">
+        <label for="blur">Blur</label>        
+        <p id="value-display">0em</p>
+</div>
+<input name="blur" type="range" max="50" min="0" value="0" oninput="txtshadow()" class="shadow">
+       
+<div class="flex">
+<label for="shd-color">Shadow Color</label>
+        <input id="sc" name="shd-color" value="#000000" class="jscolor {onFineChange:'textshadowcolor(this)'} color" ><br>
+</div>
+<h3>Box Shadow</h3>
+<div class="flex">
+            <label for="boxoff">Offset</label>
+            
+            <p  id="value-display">0em</p>
+      </div>
+      <input name="boxoff" type="range" max="50" min="-50" value="0" oninput="boxshadow()" class="boxshadow">
+      <div class="flex">
+            <label for="botset">pffset</label>
+            
+            <p id="value-display">0em</p>
+         </div>
+         <input name="boxset" type="range" max="50" min="-50" value="0" oninput="boxshadow()" class="boxshadow">
+         <div class="flex">
+            <label for="boxblur">Blur</label>
+           
+            <p id="value-display">0em</p>
+    </div>
+    <input name="boxblur" type="range" max="100" min="0" value="0" oninput="boxshadow()" class="boxshadow">
+    <div class="flex">
+            <label for="box-color">BoxShadow Color</label>
+            <input  name="box-color" value="#000000" class="jscolor {onFineChange:'boxcolor(this)'} color"><br></div>
+        <h3>HOVER</h3>
+        <div class="flex">
+            <label for="hov-color">Background</label>
+                    <input  name="hov-color" value="#ff0000" class="jscolor {onFineChange:'hovercolor(this)'}" id="hover"><br>
+            </div>
+            <button onclick="generate()" id="generate">Get The CSS</button>
+            
+        </div>
+</div>
+<div id="css">
+ 
+   <h4>CSS</h4>
+   <p>Add some style in the head</p>
+   <div id="html">
+        <pre><code>
+           
+                &lt;button class="super-button"&gt;<span id="ctaname"></span>&lt;/button&gt;
+                
+              
+            </code></pre>
+   </div>
+    <div id="csss"></div>
+    <div id="hoverCSS"></div>
+    <button id="close" onclick="closeCSS()">X</button>
+
+</div>
+<div id="instructions">
+    <h3>How to generate the CSS for your HTML buttons</h3>
+   <p> Use the controls to make the button look the way you want. Then generate the CSS. Change the class name to whatever you want. Adjusting the text size changes all of the styles. That means you only have to change to text size in a media quiery and it changes everything. ENJOY.  </p>
+    <h3>Why use a CSS generator for your links and buttons</h3>
+    <p>I made this so I can prototype your html button and anchor style without having to use a graphic design program first. It is also handy when someone gives you an image to code. This can help get things like padding and box-shadow right without having to refresh the browser. 
+            </p>
+    
+            <a href="#h">TOP</a>
+            <a href="https://formalflamingo.com/restaurants">Restaurant Web Design</a>
+            
+</div>
+
+    <script>
+var c = document.getElementsByClassName("color");
+  var inputs = document.getElementsByClassName("main");
+  var b = document.getElementsByClassName("border");
+  var shadow = document.getElementsByClassName("shadow");
+  var box = document.getElementsByClassName("boxshadow");
+  var hover = document.getElementById("hover");
+
+
+  var button = document.getElementById("button");
+  var cnt = document.getElementById("btn-container");
+  var t = cnt.style;
+  var s= button.style;
+  var pg = document.getElementsByTagName("p");
+  function background(jscolor) {
+   t.backgroundColor = '#' + jscolor;   
+}
+function backbutton(jscolor) {
+   s.backgroundColor = '#' + jscolor;   
+}
+function textcolor(jscolor) {
+   s.color = '#' + jscolor;   
+}
+function bordercolor(jscolor) {
+   s.borderColor = '#' + jscolor;   
+}
+function boxcolor(jscolor) {
+
+}
+function textshadowcolor(jscolor) {
+    s.textShadow =shadow[0].value/10+"em"+" "+ shadow[1].value/10+"em"+" " + shadow[2].value/10 + "px "+ '#' + jscolor;
+     
+}
+
+function boxcolor(jscolor) {
+   
+   s.boxShadow = box[0].value/10+"em"+" "+ box[1].value/10+"em"+" " + box[2].value/10 + "px "+'#' + jscolor;  
+}
+
+function hovcolor(jscolor){
+   s.backgroundColor = "#"+jscolor;
+} 
+function hov(){
+    button.style.backgroundColor = "#" + hover.value;
+} 
+function normal(){
+    button.style.backgroundColor = "#" + c[1].value;
+}
+
+  function main(){
+      
+       
+    
+       pg[0].innerHTML =  s.fontSize = inputs[0].value + "px";
+     pg[1].innerHTML =  s.paddingTop = s.paddingBottom = Math.round(inputs[1].value)/10 + "em";
+     pg[2].innerHTML =  s.paddingLeft = s.paddingRight = Math.round(inputs[2].value)/10 + "em";
+     pg[3].innerHTML =  s.fontWeight = Math.round(inputs[3].value)*10;
+  }
+  function border(){          
+    pg[4].innerHTML =  s.borderRadius = Math.round(b[0].value)/10 + "em";
+     pg[5].innerHTML =  s.borderWidth = Math.round(b[1].value)/10 + "em";
+       
+  }
+  function txtshadow(){
+      
+    pg[6].innerHTML =  shadow[0].value/10+"em";
+    pg[7].innerHTML =  shadow[1].value/10+"em"
+    pg[8].innerHTML =  shadow[2].value/10 + "px "
+    var shade = shadow[0].value/10+"em"+" "+ shadow[1].value/10+"em"+" " + shadow[2].value/10 + "px "+" "+"#"+c[4].value;
+     s.textShadow = shade;
+     
+  }
+  function boxshadow(){
+    pg[9].innerHTML =  box[0].value/10+"em";
+    pg[10].innerHTML =  box[1].value/10+"em"
+    pg[11].innerHTML =  box[2].value/10 + "px "
+      var boxval = box[0].value/10+"em"+" "+ box[1].value/10+"em"+" " + box[2].value/10 + "px "+" "+"#"+ c[5].value;
+    s.boxShadow = boxval;
+}
+var bck = document.getElementById("bck-color");
+function generate(){ 
+    document.getElementById("ctaname").innerHTML = document.getElementById("button-text").value
+       document.getElementById("css").style.display = "block";
+document.getElementById("csss").innerHTML = ".super-button{" + "<br>" + "background: #" +c[1].value+"; "+"color: #" +c[2].value+"; "+"font-size: "+inputs[0].value+"px; "+"padding: "+Math.round(inputs[1].value)/10 + "em "+Math.round(inputs[2].value)/10 + "em; "+"text-shadow: "+shadow[0].value/10+"em"+" "+ shadow[1].value/10+"em"+" " + shadow[2].value/10 + "px "+" "+"#"+c[4].value + "; " + "box-shadow: " +box[0].value/10+"em"+" "+ box[1].value/10+"em"+" " + box[2].value/10 + "px "+" "+"#"+ c[5].value+"; "+"border-radius: "+Math.round(b[0].value)/10+"em; "+ "border: solid "+ Math.round(b[1].value)/10 + "em #" +c[3].value+ "; font-weight: "+ Math.round(inputs[3].value)*10+"; }" + "<br>" +".super-button:hover{" + "<br>" + "background: #" +hover.value+"; }";
+
+    }
+    
+  
+
+function closeCSS(){   
+    document.getElementById("css").style.display = "none";
+   
+
+    
+}
+function text(){
+    button.innerText = document.getElementById("button-text").value ;
+}
+
+
+  
+   
+    </script>
+</body>
+</html>
